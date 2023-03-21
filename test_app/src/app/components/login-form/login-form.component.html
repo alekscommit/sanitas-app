@@ -5,11 +5,13 @@
         <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
             <div class="form-control">
                 <label for="email" [hidden]="true">Email</label>
-                <input type="text" id="email" name="email" [(ngModel)]="email" [email]="true" required placeholder="Email" />
+                <span class="icon icon-user"></span>
+                <input type="text" id="email" name="email" [(ngModel)]="email" [email]="true" required placeholder="Email">
                 <span>{{ emailErrorMessage }}</span>
             </div>
             <div class="form-control">
                 <label for="password" [hidden]="true">Contraseña</label>
+                <span class="icon icon-lock"></span>
                 <input type="password" id="password" name="password" [(ngModel)]="password" required placeholder="Contraseña" />
                 <span>{{ passwordErrorMessage }}</span>
             </div>
