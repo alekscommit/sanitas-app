@@ -1,1 +1,26 @@
-<p>login-form works!</p>
+<div class="body-content">
+    <div class="main-container">
+        <img src="../../../assets/img/logo.jpg" />
+        <h1>Prueba técnica</h1>
+        <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+            <div class="form-control">
+                <label for="email" [hidden]="true">Email</label>
+                <input type="text" id="email" name="email" [(ngModel)]="email" [email]="true" required placeholder="Email" />
+                <span>{{ emailErrorMessage }}</span>
+            </div>
+            <div class="form-control">
+                <label for="password" [hidden]="true">Password</label>
+                <input type="password" id="password" name="password" [(ngModel)]="password" required placeholder="Contraseña" />
+                <span>{{ passwordErrorMessage }}</span>
+            </div>
+            <div class="remember">
+                <label for="remember">Recordar</label>
+                <label class="switch">
+                    <input type="checkbox" id="remember" name="remember" [(ngModel)]="remember">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <button type="submit" class="btn-access">Acceder</button>
+        </form>
+    </div>
+</div>
