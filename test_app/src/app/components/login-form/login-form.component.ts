@@ -23,7 +23,6 @@ export class LoginFormComponent {
   }
 
   private validateForm(form: any): boolean {
-    console.log(form.controls);
     this.emailErrorMessage = '';
     this.passwordErrorMessage = '';
     let validate = true;
